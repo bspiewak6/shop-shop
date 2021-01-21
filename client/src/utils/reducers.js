@@ -30,7 +30,7 @@ export const reducer = (state, action) => {
         case UPDATE_CURRENT_CATEGORY:
             return {
                 ...state,
-                currentCategory: action.currentCategory ,
+                currentCategory: action.currentCategory
             };
         
         case ADD_TO_CART:
