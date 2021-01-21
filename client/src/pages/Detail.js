@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from '@apollo/react-hooks';
-import { useStoreContext } from '../utils/GlobalState';
-import { QUERY_PRODUCTS } from "../utils/queries";
-import spinner from '../assets/spinner.gif';
+
 import Cart from '../components/Cart';
-import { idbPromise } from '../utils/helpers';
+import { useStoreContext } from '../utils/GlobalState';
 import {
   REMOVE_FROM_CART,
   UPDATE_CART_QUANTITY,
   ADD_TO_CART,
   UPDATE_PRODUCTS,
 } from '../utils/actions';
-import { parse } from "graphql";
+import { QUERY_PRODUCTS } from "../utils/queries";
+import { idbPromise } from '../utils/helpers';
+import spinner from '../assets/spinner.gif';
 
 function Detail() {
-  const [state, dispatch ] = useStoreContext();
+  const [state, dispatch] = useStoreContext();
   const { id } = useParams();
 
-  const [currentProduct, setCurrentProduct ] = useState({})
+  const [currentProduct, setCurrentProduct] = useState({})
 
   const { loading, data } = useQuery(QUERY_PRODUCTS);
 
@@ -88,7 +88,7 @@ function Detail() {
 
   return (
     <>
-      {currentProduct ? (
+      {currentProduct && cart ? (
         <div className="container my-1">
           <Link to="/">
             ← Back to Products
