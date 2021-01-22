@@ -27,5 +27,5 @@ Shop Shop is an e-commerce platform that was updated to centralize all of the ap
 
 
 ## Links
-* [Book Search Heroku Deployed App](https://shop-shop-bds.herokuapp.com/)
-* [Book Search GitHub Repository](https://github.com/bspiewak6/shop-shop)
+* [Shop Shop Heroku Deployed App](https://shop-shop-bds.herokuapp.com/)
+* [Shop Shop GitHub Repository](https://github.com/bspiewak6/shop-shop)
