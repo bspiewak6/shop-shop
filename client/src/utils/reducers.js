@@ -97,4 +97,4 @@ export const reducer = (state = initialState, action) => {
 };
 
 // change for Redux
-export default reducers;
+export default reducer;

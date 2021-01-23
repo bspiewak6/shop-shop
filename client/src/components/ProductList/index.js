@@ -2,17 +2,22 @@ import React, { useEffect } from "react";
 import ProductItem from "../ProductItem";
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_PRODUCTS } from "../../utils/queries";
-import { useStoreContext } from '../../utils/GlobalState';
+// import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
-import spinner from "../../assets/spinner.gif"
+import spinner from "../../assets/spinner.gif";
+import { useSelector, useDispatch } from 'react-redux';
 
 function ProductList() {
-const [state, dispatch] = useStoreContext();
+  const state = useSelector((state) => {
+    return state
+  }); 
+  
+  const dispatch = useDispatch();
 
-const { currentCategory } = state;
+  const { currentCategory } = state;
 
-const { loading, data } = useQuery(QUERY_PRODUCTS);
+  const { loading, data } = useQuery(QUERY_PRODUCTS);
 
 useEffect(() => {
   // if there's data to be stored
