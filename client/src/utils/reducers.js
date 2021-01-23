@@ -1,4 +1,5 @@
-import { useReducer } from 'react';
+// import { useReducer } from 'react';
+
 import {
     UPDATE_PRODUCTS,
     UPDATE_CATEGORIES,
@@ -11,16 +12,24 @@ import {
     TOGGLE_CART
 } from "./actions";
 
-export const reducer = (state, action) => {
+// updated to include initialState variable for Redux
+const initialState = {
+    products: [],
+    categories: [],
+    currentCategory: '',
+    cart: [],
+    cartOpen: false
+};
+
+// pass in initialState as default argument as a parameter -- if there is no state value, return default state
+export const reducer = (state = initialState, action) => {
     switch (action.type) {
-        // if action type value is the value of 'UPDATE_PRODUCTS', return a new state object with an updated products array
         case UPDATE_PRODUCTS:
             return {
                 ...state,
                 products: [...action.products],
             };
         
-        // if action type value is the value of `UPDATE_CATEGORIES`, return a new state object with an updated categories array
         case UPDATE_CATEGORIES:
             return {
                 ...state,
@@ -82,12 +91,10 @@ export const reducer = (state, action) => {
                 cartOpen: !state.cartOpen
             };
 
-            // if it's none of these actions, do not update state at all and keep things the same!
             default:
                 return state;
         }
 };
 
-export function useProductReducer(initialState) {
-    return useReducer(reducer, initialState);
-}
+// change for Redux
+export default reducers;
