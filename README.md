@@ -1,13 +1,14 @@
-# Shop-Shop E-Commerce Platform
+# Shop Shop E-Commerce Platform
 
-<a href="https://shop-shop-bds.herokuapp.com/">![Deployed Application](https://img.shields.io/badge/Deployed%20App-orange.svg)</a>
+<a href="https://shop-shop-bds.herokuapp.com/">![Deployed Application](https://img.shields.io/badge/Deployed%20App-Shop%20Shop-E4405F?style=for-the-badge)</a>
 
 ## Description
-Shop Shop is an e-commerce platform that was updated to centralize all of the app's data in state globally to make it easier to share state across the entire application. Created shopping cart, added offline functionality and Stripe secure online payments.
+Shop Shop is an e-commerce platform that was updated to centralize all of the app's data in state globally to make it easier to share state across the entire application. Additionally, the shopping cart, offline functionality and Stripe secure online payment processing was added.
 
 ## Table of Contents
 * [Technologies](#technologies)
-* [Screenshots](#screenshots)
+* [Screenshot](#screenshot)
+* [Enhancements](#enhancements)
 * [Links](#links)
 
 ## Technologies
@@ -19,13 +20,17 @@ Shop Shop is an e-commerce platform that was updated to centralize all of the ap
 ![MongoDB Atlas](https://img.shields.io/badge/MongoDB%20Atlas-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)  
 ![Mongoose.js](https://img.shields.io/badge/Mongoose.js-880000?style=for-the-badge)  
 ![GraphQL Playground](https://img.shields.io/badge/GraphQL-FF4500?style=for-the-badge)   
+![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)  
 ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)  
 
-## Screenshots
-#### Homepage
-![Screenshots](./client/src/assets/screenshot_shop-shop_homepage.png)
+## Screenshot
+#### Homepage Including Storefront, Signup, Login & Cart Functionality
+![Screenshot](./client/src/assets/screenshot_shop-shop_homepage.png)
 
+## Enhancements
+ The task for this project is to use the code from the Shop Shop e-commerce platform and refactor it to now use Redux to manage global state instead of the Context API. This will remove the site's state management from the React ecosystem.
 
 ## Links
-* [Shop Shop Heroku Deployed App](https://shop-shop-bds.herokuapp.com/)
-* [Shop Shop GitHub Repository](https://github.com/bspiewak6/shop-shop)
+<a href="https://shop-shop-bds.herokuapp.com/">![Deployed Application](https://img.shields.io/badge/Deployed%20App-Shop%20Shop-E4405F?style=for-the-badge)</a> 
+
+<a href="https://github.com/bspiewak6/shop-shop">![GitHub Repository](https://img.shields.io/badge/GitHub%20Repository-100000?style=for-the-badge&logo=github&logoColor=white)</a>  
