@@ -9,9 +9,12 @@ import spinner from "../../assets/spinner.gif";
 import { useSelector, useDispatch } from 'react-redux';
 
 function ProductList() {
-  const state = useSelector((state) => {
-    return state
-  }); 
+  //  const [state, dispatch] = useStoreContext();
+  // const state = useSelector((state) => {
+  //   return state
+  // }); 
+
+  const state = useSelector(state => state);
   
   const dispatch = useDispatch();
 
@@ -52,7 +55,6 @@ function filterProducts() {
 
   return state.products.filter(product => product.category._id === currentCategory);
 }
-
 
   return (
     <div className="my-2">

@@ -7,13 +7,6 @@ import { idbPromise } from '../../utils/helpers';
 import { useSelector, useDispatch } from 'react-redux';
 
 function ProductItem(item) {
-  // const [state, dispatch] = useStoreContext();
-  const state = useSelector((state) => {
-    return state
-  }); 
-  
-  const dispatch = useDispatch();
-  
   const {
     image,
     name,
@@ -22,7 +15,15 @@ function ProductItem(item) {
     quantity
   } = item;
 
-  const { cart } = state;
+  // const [state, dispatch] = useStoreContext();
+  // const state = useSelector((state) => {
+  //   return state
+  // }); 
+  
+  const cart = useSelector(state => state.cart);
+  const dispatch = useDispatch();
+  
+  // const { cart } = state;
 
   const addToCart = () => {
     // find the cart item with the matching id
